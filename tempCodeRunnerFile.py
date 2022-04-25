@@ -1,0 +1,1 @@
+window.blit(score_text, score_rect)

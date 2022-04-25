@@ -32,8 +32,6 @@ class player(pygame.sprite.Sprite):
     def update(self):
         self.player_input()
         self.player_gravity()
-
-
 class player1(player):
     def __init__(self, image, scale, rect):
         super().__init__(image, scale, rect)
@@ -66,7 +64,13 @@ class obstacle2(obstacle):
         self.__scale = scale
         self.rect = rect
 
-
+#score
+def score():
+    time = int(pygame.time.get_ticks()/1000) - score_time
+    score = font.render(f'score :{time}',False,"white")
+    score_rect = score.get_rect(center = (1100,100))
+    window.blit(score,score_rect)
+#score end
 
 #class end
 
@@ -95,8 +99,8 @@ title_rect = title.get_rect(center = (600,100))
 #title end
 
 #score
-score_text = font.render('Score : 0',False,"white")
-score_rect = score_text.get_rect(center = (1100,100))
+# score_text = font.render('Score : 0',False,"white")
+# score_rect = score_text.get_rect(center = (1100,100))
 #score end
 
 #ground
@@ -128,7 +132,7 @@ obs4_rect = pygame
 player_img = pygame.image.load('graphic/NinjaRun/png/Idle__000.png').convert_alpha()
 player_scl = pygame.transform.scale(player_img,(90,130))
 player_rect = player_scl.get_rect(midtop = (100,575))
-player = player(player_img,player_scl,player_rect)
+player = player1(player_img,player_scl,player_rect)
 #player1 end
 
 player.max = 0
@@ -137,6 +141,7 @@ width = 1200
 obs1_x = 500
 obs2_x = 600
 player_gravity = 0
+score_time = 0
 while True:
     for even in pygame.event.get():
         if even.type == pygame.QUIT:
@@ -151,6 +156,7 @@ while True:
                 game = True
                 obs1.rect.right = 800
                 obs2.rect.right = 1200
+                score_time = int(pygame.time.get_ticks()/1000)
 
     #reapeat background
     if game == True:
@@ -182,7 +188,7 @@ while True:
     #obstacle end
 
     #score
-        window.blit(score_text, score_rect)
+        score()
     #score end
 
     #player
