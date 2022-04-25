@@ -1,4 +1,5 @@
 from ast import And
+from email.mime import image
 from importlib.resources import path
 from tkinter import EventType
 from turtle import width
@@ -80,6 +81,7 @@ window = pygame.display.set_mode((1200,800))
 pygame.display.set_caption('Nama Game')
 clock = pygame.time.Clock() 
 font = pygame.font.Font('graphic/last_ninja/lastninja.ttf',20)
+font1 = pygame.font.Font('graphic/last_ninja/lastninja.ttf',10)
 fonttitle = pygame.font.Font('graphic/last_ninja/lastninja.ttf',60)
 
 #background
@@ -218,7 +220,16 @@ while True:
         #print("loncat")
     #input end
     else:
-        window.fill("black")
+        ninja = pygame.image.load('graphic/NinjaRun/png/Dead__009.png').convert_alpha()
+        ninja_scl = pygame.transform.scale(ninja,(200,200))
+        window.blit(ninja_scl,(500,270))
+        popup = font.render(f'& Selamat anda kalah &',False,"white")
+        popup1 = font.render(f'Tekan Tombol Arrow atas untuk memulai kembali',False,"white")
+        popup_rect = popup.get_rect(center = (600,500))
+        popup_rect1 = popup1.get_rect(center = (600,550))
+        window.blit(popup,popup_rect)
+        window.blit(popup1,popup_rect1)
+
 
     #crash player
     if player.rect.colliderect(obs1.rect) or player.rect.colliderect(obs2.rect):
