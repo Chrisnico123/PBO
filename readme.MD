@@ -2,6 +2,10 @@
 
 This is a game made like Dinosaur game concept on Google, and this is game was created for complete my team task in Collage.
 
+## Screenshots
+
+![App Screenshot](Assets/ss1.png)
+
 ## Features
 
 - Player can jump
