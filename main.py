@@ -1,45 +1,68 @@
-from ast import And
-from email.mime import image
-from importlib.resources import path
-from tkinter import EventType
 from turtle import width
-from urllib.request import ProxyDigestAuthHandler
 import pygame
 from sys import exit
 
 #class
 class player(pygame.sprite.Sprite):
     max = 0
-    def __init__(self,image,scale,rect):
+    def __init__(self,image,image1, scale,scale1,jump,jump_scl):
         super().__init__()
         self.__image = image
+        self.__image1 = image1
+        self.__jump = jump
+        self.__scale = scale1
         self.__transform = scale
-        self.rect = rect
+        self.__scale1 = jump_scl
         self.gravity = 0
+        self.player_run1 = [self.__transform,self.__scale]
+        self.player_run = [self.__image,self.__image1]
+        self.player_index = 0
+        self.img = self.player_run[self.player_index]
+        self.img1 = self.player_run1[self.player_index]
+        self.rect = self.img1.get_rect(midtop = (100,575))
     def get_transform(self):
-        return self.__transform
+        return self.img1
     def get_image(self):
-        return self.__image
+        return self.img
     def player_input(self):
-        if even.type == pygame.KEYDOWN and player.max < 2 and self.rect.bottom > 705:
+        keys = pygame.key.get_pressed()
+        if keys[pygame.K_UP] and player.max < 2 and self.rect.bottom > 705:
             self.gravity = -20
             player.max += 1
+        if keys[pygame.K_DOWN] and self.rect.bottom == 705:
+            self.img = pygame.image.load('graphic/NinjaRun/png/Slide__000.png')
+            self.img1 = pygame.transform.scale(self.img,(170,120))
     def player_gravity(self):
         self.gravity += 1
         self.rect.y += self.gravity
         if self.rect.bottom >= 705:
             self.rect.bottom = 705
             player.max = 0
+    def animation(self):
+        if self.rect.bottom < 705:
+            self.img = self.__jump
+            self.img1 = self.__scale1
+        else:
+            self.player_index += 0.1
+            if self.player_index >= len(self.player_run): 
+                self.player_index = 0
+            self.img = self.player_run[int(self.player_index)]
+            self.img1 = self.player_run1[int(self.player_index)]
+            
     def update(self):
         self.player_input()
         self.player_gravity()
+        self.animation()
 class player1(player):
-    def __init__(self, image, scale, rect):
-        super().__init__(image, scale, rect)
+    def __init__(self,image,image1, scale,scale1,jump,jump_scl):
+        super().__init__(image,image1, scale,scale1,jump,jump_scl)
         self.__image = image
+        self.__image1 = image1
+        self.__jump= jump
+        self.__jump_scl = jump_scl
+        self.__scale1 = scale1
         self.__scale = scale
-        self.rect = rect
-    
+
 class obstacle(pygame.sprite.Sprite):
     def __init__(self,image,scale,rect):
         super().__init__()
@@ -131,10 +154,13 @@ obs4_rect = pygame
 #obstacle
 
 #player1
-player_img = pygame.image.load('graphic/NinjaRun/png/Idle__000.png').convert_alpha()
-player_scl = pygame.transform.scale(player_img,(90,130))
-player_rect = player_scl.get_rect(midtop = (100,575))
-player = player1(player_img,player_scl,player_rect)
+player_img = pygame.image.load('graphic/NinjaRun/png/Run__004.png').convert_alpha()
+player_img1 = pygame.image.load('graphic/NinjaRun/png/Run__005.png').convert_alpha()
+player_jump = pygame.image.load('graphic/NinjaRun/png/jump__006.png').convert_alpha()
+player_jump_scl = pygame.transform.scale(player_jump,(120,170))
+player_scl = pygame.transform.scale(player_img,(120,140))
+player_scl1 = pygame.transform.scale(player_img1,(120,140))
+player = player1(player_img,player_img1,player_scl,player_scl1,player_jump,player_jump_scl)
 #player1 end
 
 player.max = 0
@@ -150,11 +176,13 @@ while True:
             pygame.quit()
             exit()
         if game == True:
-            if even.type == pygame.KEYDOWN and player.max < 2:
+            keys = pygame.key.get_pressed()
+            if keys[pygame.K_UP] and player.max < 2:
                 player.max += 1
                 player.gravity = -20
         else:
-            if even.type == pygame.KEYDOWN:
+            keys1 = pygame.key.get_pressed()
+            if keys1[pygame.K_UP]:
                 game = True
                 obs1.rect.right = 800
                 obs2.rect.right = 1200
@@ -223,8 +251,8 @@ while True:
         ninja = pygame.image.load('graphic/NinjaRun/png/Dead__009.png').convert_alpha()
         ninja_scl = pygame.transform.scale(ninja,(200,200))
         window.blit(ninja_scl,(500,270))
-        popup = font.render(f'& Selamat anda kalah &',False,"white")
-        popup1 = font.render(f'Tekan Tombol Arrow atas untuk memulai kembali',False,"white")
+        popup = font.render(f'& Selamat anda Terlalu NUB untuk game ini &',False,"white")
+        popup1 = font.render(f'Tekan Tombol Arrow UP untuk memulai kembali',False,"white")
         popup_rect = popup.get_rect(center = (600,500))
         popup_rect1 = popup1.get_rect(center = (600,550))
         window.blit(popup,popup_rect)

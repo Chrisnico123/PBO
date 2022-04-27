@@ -5,6 +5,7 @@ This is a game made like Dinosaur game concept on Google, and this is game was c
 ## Screenshots
 
 ![App Screenshot](Assets/ss1.png)
+![App Screenshot](Assets/ss2.png)
 
 ## Features
 
