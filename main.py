@@ -94,6 +94,22 @@ def score():
     score = font.render(f'score :{time}',False,"white")
     score_rect = score.get_rect(center = (1100,100))
     window.blit(score,score_rect)
+    try :
+        bestscore = int(HighestScore())
+    except:
+        bestscore = 0
+    if(time>bestscore):
+        bestscore = time
+    with open("HighestScore.txt", "w") as file:
+        file.write(str(bestscore))
+    screenbestscore = font.render(f'Highest Score :{bestscore}',False,"white")
+    bestscore_rect = screenbestscore.get_rect(center = (1050,150))
+    window.blit(screenbestscore, bestscore_rect)
+    
+#score end
+def HighestScore():
+    with open("HighestScore.txt", "r") as file:
+        return file.read()
 #score end
 
 #class end
