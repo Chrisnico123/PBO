@@ -1,11 +1,10 @@
-from turtle import width
 import pygame
 from sys import exit
 
 #class
 class player(pygame.sprite.Sprite):
     max = 0
-    def __init__(self,image,image1, scale,scale1,jump,jump_scl):
+    def __init__(self,image,image1, scale,scale1,jump,jump_scl,slide,slide_scl):
         super().__init__()
         self.__image = image
         self.__image1 = image1
@@ -13,6 +12,8 @@ class player(pygame.sprite.Sprite):
         self.__scale = scale1
         self.__transform = scale
         self.__scale1 = jump_scl
+        self.__slide = slide
+        self.__slide_scl = slide_scl
         self.gravity = 0
         self.player_run1 = [self.__transform,self.__scale]
         self.player_run = [self.__image,self.__image1]
@@ -30,8 +31,7 @@ class player(pygame.sprite.Sprite):
             self.gravity = -20
             player.max += 1
         if keys[pygame.K_DOWN] and self.rect.bottom == 705:
-            self.img = pygame.image.load('graphic/NinjaRun/png/Slide__000.png')
-            self.img1 = pygame.transform.scale(self.img,(170,120))
+            self.gravity = 5
     def player_gravity(self):
         self.gravity += 1
         self.rect.y += self.gravity
@@ -42,6 +42,9 @@ class player(pygame.sprite.Sprite):
         if self.rect.bottom < 705:
             self.img = self.__jump
             self.img1 = self.__scale1
+        elif self.rect.bottom > 705:
+            self.img = self.__slide
+            self.img1 = self.__slide_scl
         else:
             self.player_index += 0.1
             if self.player_index >= len(self.player_run): 
@@ -54,14 +57,16 @@ class player(pygame.sprite.Sprite):
         self.player_gravity()
         self.animation()
 class player1(player):
-    def __init__(self,image,image1, scale,scale1,jump,jump_scl):
-        super().__init__(image,image1, scale,scale1,jump,jump_scl)
+    def __init__(self,image,image1, scale,scale1,jump,jump_scl,slide,slide_scl):
+        super().__init__(image,image1, scale,scale1,jump,jump_scl,slide,slide_scl)
         self.__image = image
         self.__image1 = image1
         self.__jump= jump
         self.__jump_scl = jump_scl
         self.__scale1 = scale1
         self.__scale = scale
+        self.__slide = slide
+        self.__slide_scl = slide_scl
 
 class obstacle(pygame.sprite.Sprite):
     def __init__(self,image,scale,rect):
@@ -101,7 +106,7 @@ def score():
 pygame.init()
 game = True
 window = pygame.display.set_mode((1200,800))
-pygame.display.set_caption('Nama Game')
+pygame.display.set_caption('Last Ninja')
 clock = pygame.time.Clock() 
 font = pygame.font.Font('graphic/last_ninja/lastninja.ttf',20)
 font1 = pygame.font.Font('graphic/last_ninja/lastninja.ttf',10)
@@ -157,10 +162,12 @@ obs4_rect = pygame
 player_img = pygame.image.load('graphic/NinjaRun/png/Run__004.png').convert_alpha()
 player_img1 = pygame.image.load('graphic/NinjaRun/png/Run__005.png').convert_alpha()
 player_jump = pygame.image.load('graphic/NinjaRun/png/jump__006.png').convert_alpha()
+player_slide = pygame.image.load('graphic/NinjaRun/png/Slide__009.png').convert_alpha()
+slide_scl = pygame.transform.scale(player_slide,(120,170))
 player_jump_scl = pygame.transform.scale(player_jump,(120,170))
 player_scl = pygame.transform.scale(player_img,(120,140))
 player_scl1 = pygame.transform.scale(player_img1,(120,140))
-player = player1(player_img,player_img1,player_scl,player_scl1,player_jump,player_jump_scl)
+player = player1(player_img,player_img1,player_scl,player_scl1,player_jump,player_jump_scl,player_slide,slide_scl)
 #player1 end
 
 player.max = 0
@@ -180,6 +187,8 @@ while True:
             if keys[pygame.K_UP] and player.max < 2:
                 player.max += 1
                 player.gravity = -20
+            if keys[pygame.K_DOWN]:
+                player.gravity = 5
         else:
             keys1 = pygame.key.get_pressed()
             if keys1[pygame.K_UP]:
