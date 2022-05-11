@@ -1,2 +1,1 @@
-self.gravity += 1
-        self.rect.y += self.gravity
+if obs3.rect.left < -100 : obs3.rect.right = 1300
