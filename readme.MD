@@ -27,7 +27,7 @@ This is a game made like Dinosaur game concept on Google, and this is game was c
 Clone :
 
 ```sh
-https://github.com/Chrisnico123/PBO.git
+git clone https://github.com/Chrisnico123/PBO.git
 ```
 
 Instalation Pygame:
