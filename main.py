@@ -203,7 +203,7 @@ obs4_rect = pygame
 #player1
 player_img = pygame.image.load('graphic/NinjaRun/png/Run__004.png').convert_alpha()
 player_img1 = pygame.image.load('graphic/NinjaRun/png/Run__005.png').convert_alpha()
-player_jump = pygame.image.load('graphic/NinjaRun/png/jump__006.png').convert_alpha()
+player_jump = pygame.image.load('graphic/NinjaRun/png/Jump__006.png').convert_alpha()
 player_slide = pygame.image.load('graphic/NinjaRun/png/Slide__009.png').convert_alpha()
 slide_scl = pygame.transform.scale(player_slide,(140,95))
 player_jump_scl = pygame.transform.scale(player_jump,(120,170))
@@ -214,7 +214,7 @@ player = player1(player_img,player_img1,player_scl,player_scl1,player_jump,playe
 #player2
 player_img_2 = pygame.image.load('graphic/NinjaGirl/png/Run__004.png').convert_alpha()
 player_img1_2 = pygame.image.load('graphic/NinjaGirl/png/Run__005.png').convert_alpha()
-player_jump_2 = pygame.image.load('graphic/NinjaGirl/png/jump__006.png').convert_alpha()
+player_jump_2 = pygame.image.load('graphic/NinjaGirl/png/Jump__006.png').convert_alpha()
 player_slide_2 = pygame.image.load('graphic/NinjaGirl/png/Slide__009.png').convert_alpha()
 slide_scl_2 = pygame.transform.scale(player_slide_2,(140,95))
 player_jump_scl_2 = pygame.transform.scale(player_jump_2,(120,170))

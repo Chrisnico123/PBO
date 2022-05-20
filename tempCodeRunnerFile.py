@@ -1,1 +1,0 @@
-if obs3.rect.left < -100 : obs3.rect.right = 1300
