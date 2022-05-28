@@ -1,42 +1,112 @@
-# Hello Guys
+<h1 align="center"> <img alt="Last - Ninja" title="Last - Ninja" width="50">Tap Tap Defense </h1> <br>
 
-This is a game made like Dinosaur game concept on Google, and this is game was created for complete my team task in Collage.
+<p align="center">
+    <img alt="Tap Tap Defense" title="Tap Tap Defense" src="assets/ss1.png" width="600">
+</p>
+<p>
+<p align="center"> Last - Ninja <br>
+(Tugas Besar PBO RD-10) <br>
+</p>
+<p align="center">
+    <a href="https://github.com/rajastra/Tap-Tap-Defense/graphs/contributors">
+    <img src="https://img.shields.io/badge/contributors-6-red?style=flat-square&logo=appveyor" alt="Contributors">
+  </a>
+    <a href="https://www.pygame.org/news">
+    <img src="https://img.shields.io/pypi/v/pygame?style=flat-square&logo=appveyor" alt="Pygame">
+  </a>
+</p>
 
-## Screenshots
+<br>
 
-![App Screenshot](Assets/ss1.png)
-![App Screenshot](Assets/ss2.png)
-![App Screenshot](Assets/ss3.png)
-![App Screenshot](Assets/ss4.png)
+## Description of Project
 
-## Features
+Proyek yang kami buat yaitu Proyek game sederhana bernama <b>Last - Ninja</b>, <b>Last - Ninja</b> adalah sebuah game yang berkonsep sama seperti game Dinosaurus yang ada di google chrome, jadi nanti ada sebuah character yang dapat digerakan oleh user, character dapat digerakan dengan cara menekan tombol panah atas untuk melompat dan panah bawah untuk menunduk.
 
-- Player can jump
-- Player can run
-- Player can Slide
-- Player can dead if player touch obstacle
-- Player can Choice Character
+## How to Run a Game
 
-## Technology
+- #### Install Dependecies
 
-- [Python] - Programing Languange
-- [Pygame] - Library Python to make game
-
-## Instalation
-
-Clone :
-
-```sh
-git clone https://github.com/Chrisnico123/PBO.git
+```bash
+git clone https://github.com/rajastra/Tap-Tap-Defense
 ```
 
-Instalation Pygame:
+```bash
+cd PBO
+```
 
-```sh
+```bash
 pip install pygame
 ```
 
-after you clone and install pygame, you can run it, and enjoy the game !!!
+- ### Run a Game
+
+```python
+python main.py
+```
+
+<br>
+
+<br>
+
+## How to Run a Game in Docker (Linux)
+
+<br>
+
+### Step 1
+
+Buka Terminal pada Linux anda masing-masing dan pastikan docker sudah terinstall di komputer anda.
+<br>
+
+### Step 2
+
+Silahkan clone file game yang ada di Github dengan cara :
+<br>
+Syntax :
+
+```bash
+sudo git clone
+```
+
+<br>
+
+### Step 3
+
+Build :
+<br>
+Syntax :
+
+```bash
+sudo docker build -t last-ninja .
+```
+
+### Step 4
+
+Jalankan Perintah berikut ini:
+
+```bash
+XAUTH=$HOME/.Xauthority
+touch $XAUTH
+xhost +
+xhost + username (username linux anda)
+```
+
+<br>
+
+### Last Step
+
+Run a Game
+
+```bash
+docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix  -e DISPLAY=unix$DISPLAY --device /dev/snd mckriw/last-ninja
+```
+
+Or
+
+```bash
+sudo docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix  -e DISPLAY=unix$DISPLAY --device /dev/snd mckriw/last-ninja
+```
+
+<br>
 
 ## 🚀 About Team (Kelompok 10)
 
