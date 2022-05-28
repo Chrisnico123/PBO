@@ -8,7 +8,7 @@
 (Tugas Besar PBO RD-10) <br>
 </p>
 <p align="center">
-    <a href="https://github.com/rajastra/Tap-Tap-Defense/graphs/contributors">
+    <a href="https://github.com/Chrisnico123/PBO/graphs/contributors">
     <img src="https://img.shields.io/badge/contributors-6-red?style=flat-square&logo=appveyor" alt="Contributors">
   </a>
     <a href="https://www.pygame.org/news">
@@ -120,7 +120,44 @@ Untuk penjelasan dari perintah-perintah menjalankan game pygame di docker contai
 Klik Gambar untuk menonton :)
 <br>
 
-[![Penjalasan cara menjalankan game pygame di Docker Container](Assets/ss2.png)](https://www.youtube.com/watch?v=jGQQQT2IF7o&ab_channel=I2O14O244_ChrisnicoAlexanderHutapea)
+## How to Play a Game
+
+- ### Start a Game
+
+Berikut ini adalah gambar untuk panduan memulai Game <b> Last - Ninja</b>
+
+  <img alt="Last - Ninja" title="Last - Ninja" src="Assets/ss3.png" width="600">
+
+- ### Game Play
+
+Berikut ini adalah gambar untuk panduan bermain <b> Tap Tap Defense</b>
+
+Gameplay :
+
+1. User pertama tama akan memilih karakter untuk dimainkan
+2. Setelah itu user akan menekan tombol space untuk memulai game
+3. Kemudian User akan menghindari rintangan yang ada kemudian mengumpulkan score yang banyak.
+
+- ### End Game
+
+Permainan akan berakhir apabila karakter menyentuh rintangan
+<br>
+Bisa dilihat pada gambar dibawah ini :
+<br>
+
+<img alt="Last - Ninja" title="Last - Ninja" src="Assets/ss2.png" width="600">
+
+- ### Control in Game
+
+Berikut adalah gambar untuk contoh control untuk menjalankan karakter.
+<br>
+<img alt="Tap Tap Defense" title="Tap Tap Defense" src="Assets/arrow-keys.jpeg" width="600">
+<br>
+
+1. Panah atas berguna untuk melompat
+2. Panah bawah digunakan untuk menunduk
+
+[![Penjalasan cara menjalankan game pygame di Docker Container](Assets/ss1.png)](https://www.youtube.com/watch?v=jGQQQT2IF7o&ab_channel=I2O14O244_ChrisnicoAlexanderHutapea)
 
 ## 🚀 About Team (Kelompok 10)
 
