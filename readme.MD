@@ -1,7 +1,7 @@
-<h1 align="center">Tap Tap Defense </h1> <br>
+<h1 align="center">Last - Ninja </h1> <br>
 
 <p align="center">
-    <img alt="Tap Tap Defense" title="Tap Tap Defense" src="Assets/ss1.png" width="600">
+    <img alt="Last - Ninja" title="Last - Ninja" src="Assets/ss1.png" width="600">
 </p>
 <p>
 <p align="center"> Last - Ninja <br>
@@ -112,6 +112,15 @@ sudo docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix  -e DISPLAY=unix$DISPLAY --
 ```
 
 <br>
+
+### Link Video YouTube
+
+Untuk penjelasan dari perintah-perintah menjalankan game pygame di docker container dapat dilihat pada video dibawah ini.
+<br>
+Klik Gambar untuk menonton :)
+<br>
+
+[![Penjalasan cara menjalankan game pygame di Docker Container](Assets/ss2.png)](https://www.youtube.com/watch?v=jGQQQT2IF7o&ab_channel=I2O14O244_ChrisnicoAlexanderHutapea)
 
 ## 🚀 About Team (Kelompok 10)
 
