@@ -157,7 +157,7 @@ Untuk penjelasan dari perintah-perintah menjalankan game pygame di docker contai
 Klik Gambar untuk menonton :)
 <br>
 
-[![Penjalasan cara menjalankan game pygame di Docker Container](Assets/yt.png.png)](https://www.youtube.com/watch?v=jGQQQT2IF7o&ab_channel=I2O14O244_ChrisnicoAlexanderHutapea)
+[![Penjalasan cara menjalankan game pygame di Docker Container](Assets/yt.png)](https://www.youtube.com/watch?v=jGQQQT2IF7o&ab_channel=I2O14O244_ChrisnicoAlexanderHutapea)
 
 ## 🚀 About Team (Kelompok 10)
 
