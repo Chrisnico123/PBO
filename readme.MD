@@ -113,13 +113,6 @@ sudo docker run -it -v /tmp/.X11-unix:/tmp/.X11-unix  -e DISPLAY=unix$DISPLAY --
 
 <br>
 
-### Link Video YouTube
-
-Untuk penjelasan dari perintah-perintah menjalankan game pygame di docker container dapat dilihat pada video dibawah ini.
-<br>
-Klik Gambar untuk menonton :)
-<br>
-
 ## How to Play a Game
 
 - ### Start a Game
@@ -157,7 +150,14 @@ Berikut adalah gambar untuk contoh control untuk menjalankan karakter.
 1. Panah atas berguna untuk melompat
 2. Panah bawah digunakan untuk menunduk
 
-[![Penjalasan cara menjalankan game pygame di Docker Container](Assets/ss1.png)](https://www.youtube.com/watch?v=jGQQQT2IF7o&ab_channel=I2O14O244_ChrisnicoAlexanderHutapea)
+### Link Video YouTube
+
+Untuk penjelasan dari perintah-perintah menjalankan game pygame di docker container dapat dilihat pada video dibawah ini.
+<br>
+Klik Gambar untuk menonton :)
+<br>
+
+[![Penjalasan cara menjalankan game pygame di Docker Container](Assets/yt.png.png)](https://www.youtube.com/watch?v=jGQQQT2IF7o&ab_channel=I2O14O244_ChrisnicoAlexanderHutapea)
 
 ## 🚀 About Team (Kelompok 10)
 
