@@ -1,7 +1,7 @@
-<h1 align="center"> <img alt="Last - Ninja" title="Last - Ninja" width="50">Tap Tap Defense </h1> <br>
+<h1 align="center">Tap Tap Defense </h1> <br>
 
 <p align="center">
-    <img alt="Tap Tap Defense" title="Tap Tap Defense" src="assets/ss1.png" width="600">
+    <img alt="Tap Tap Defense" title="Tap Tap Defense" src="Assets/ss1.png" width="600">
 </p>
 <p>
 <p align="center"> Last - Ninja <br>
@@ -27,7 +27,7 @@ Proyek yang kami buat yaitu Proyek game sederhana bernama <b>Last - Ninja</b>, <
 - #### Install Dependecies
 
 ```bash
-git clone https://github.com/rajastra/Tap-Tap-Defense
+git clone https://github.com/Chrisnico123/PBO.git
 ```
 
 ```bash
@@ -64,16 +64,12 @@ Silahkan clone file game yang ada di Github dengan cara :
 Syntax :
 
 ```bash
-sudo git clone
+sudo git clone https://github.com/Chrisnico123/PBO.git
 ```
 
 <br>
 
 ### Step 3
-
-Build :
-<br>
-Syntax :
 
 ```bash
 sudo docker build -t last-ninja .
@@ -85,8 +81,17 @@ Jalankan Perintah berikut ini:
 
 ```bash
 XAUTH=$HOME/.Xauthority
+```
+
+```bash
 touch $XAUTH
+```
+
+```bash
 xhost +
+```
+
+```bash
 xhost + username (username linux anda)
 ```
 
