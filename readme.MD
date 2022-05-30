@@ -123,7 +123,7 @@ Berikut ini adalah gambar untuk panduan memulai Game <b> Last - Ninja</b>
 
 - ### Game Play
 
-Berikut ini adalah gambar untuk panduan bermain <b> Tap Tap Defense</b>
+Berikut ini adalah gambar untuk panduan bermain <b> Last - Ninja</b>
 
 Gameplay :
 
@@ -144,7 +144,7 @@ Bisa dilihat pada gambar dibawah ini :
 
 Berikut adalah gambar untuk contoh control untuk menjalankan karakter.
 <br>
-<img alt="Tap Tap Defense" title="Tap Tap Defense" src="Assets/arrow-keys.jpeg" width="600">
+<img alt="Last - Ninja" title="Last - Ninja" src="Assets/arrow-keys.jpeg" width="600">
 <br>
 
 1. Panah atas berguna untuk melompat
