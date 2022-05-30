@@ -123,7 +123,7 @@ Berikut ini adalah gambar untuk panduan memulai Game <b> Last - Ninja</b>
 
 - ### Game Play
 
-Berikut ini adalah gambar untuk panduan bermain <b> Last - Ninja</b>
+Berikut ini adalah panduan untuk bermain <b> Last - Ninja</b>
 
 Gameplay :
 
