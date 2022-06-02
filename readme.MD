@@ -20,7 +20,7 @@
 
 ## Description of Project
 
-Proyek yang kami buat yaitu Proyek game sederhana bernama <b>Last - Ninja</b>, <b>Last - Ninja</b> adalah sebuah game yang berkonsep sama seperti game Dinosaurus yang ada di google chrome, jadi nanti ada sebuah character yang dapat digerakan oleh user, character dapat digerakan dengan cara menekan tombol panah atas untuk melompat dan panah bawah untuk menunduk.
+Proyek yang kami buat yaitu Proyek game sederhana bernama <b>Last - Ninja</b>, <b>Last - Ninja</b> adalah sebuah game yang berkonsep sama seperti game Dinosaurus yang ada di google chrome, jadi nanti ada sebuah character yang dapat digerakan oleh user, character dapat digerakan dengan cara menekan tombol panah atas untuk melompat dan panah bawah untuk menunduk, game ini endless play dimana user akan terus bermain dan skor akan terus bertambah hingga objek menabrak rintangan.
 
 ## How to Run a Game
 
